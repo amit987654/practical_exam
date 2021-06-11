@@ -1,0 +1,21 @@
+<input type="text" matInput
+    ngxDaterangepickerMd
+    [(ngModel)]="selected"
+    [locale]="{applyLabel: 'ok', format: 'DD-MM-YYYY'}"
+
+    name="daterange"/>
+<p>
+  <button class="ngx-daterangepicker-action" type="button" (click)="open()">Open</button>
+ <!-- Selected: {{selected | json}} -->
+</p>
+
+
+<div *ngFor="let item of totalData">
+
+  WebSiteId : <span> {{item.websiteId}}</span>
+  <br>
+  Chats: <span> {{item.chats}}</span>
+  <br>
+  MissedChats: <span>{{item.missedChats}}</span>
+  <hr>
+</div>
